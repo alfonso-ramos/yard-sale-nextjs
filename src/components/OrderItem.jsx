@@ -3,7 +3,7 @@ import AppContext from '@context/AppContext';
 
 import CloseIcon from '@icons/icon_close.png'
 
-import styles from '@styles/OrderItem.module.scss'
+import styles from '@styles/components/OrderItem.module.scss'
 
 const OrderItem = (props) => {
     const {product, indexValue} = props

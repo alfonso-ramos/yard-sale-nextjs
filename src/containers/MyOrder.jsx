@@ -5,7 +5,7 @@ import flecha from '@icons/flechita.svg'
 
 import AppContext from '@context/AppContext'
 
-import styles from "@styles/MyOrder.module.scss"
+import styles from "@styles/containers/MyOrder.module.scss"
 
 
 const MyOrder = () => {

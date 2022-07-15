@@ -8,7 +8,7 @@ import logo from '@logos/logo_yard_sale.svg'
 import ShoppingCartIcon from '@icons/icon_shopping_cart.svg'
 import AppContext from '@context/AppContext'
 
-import styles from '@styles/Header.modules.scss'
+import styles from '@styles/components/Header.module.scss'
 
 const Header = () => {
     const [toggle, setToggle] = useState(false)
@@ -21,9 +21,9 @@ const Header = () => {
 
     return (
             <nav className={styles.Nav}>
-                <img src={menu} alt="menu" className="menu" />
-                <div className="navbar-left">
-                    <img src={logo} alt="logo" className="nav-logo" />
+                <img src={menu} alt="menu" className={styles.menu} />
+                <div className={styles['navbar-left']}>
+                    <img src={logo} alt="logo" className={styles['nav-logo']} />
                     <ul>
                         <li>
                             <a href="/">All</a>
@@ -45,13 +45,13 @@ const Header = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="navbar-right">
+                <div className={styles['navbar-right']}>
                     <ul>
-                        <li className="navbar-email" onClick={handleToggle}>
+                        <li className={styles['navbar-email']} onClick={handleToggle}>
                             platzi@example.com
                         </li>
                         <li
-                            className="navbar-shopping-cart"
+                            className={styles['navbar-shopping-cart']}
                             onClick={() => setToggleOrders(!toggleOrders)}>
                             <img src={ShoppingCartIcon} alt="shopping cart" />
                             {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}

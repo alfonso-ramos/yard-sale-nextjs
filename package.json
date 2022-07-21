@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jsx-a11y": "^6.6.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "file-loader": "^6.2.0",
     "next": "12.2.2",
     "prettier": "^2.7.1",
     "react": "18.2.0",

@@ -1,5 +1,5 @@
 import OrderItem from "../components/OrderItem"
-import '../styles/pages/Checkout.scss'
+import styles from '@styles/pages/Checkout.scss'
 
 const Checkout = () => {
   return (

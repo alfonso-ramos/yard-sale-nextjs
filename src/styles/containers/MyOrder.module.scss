@@ -13,6 +13,7 @@
 	border: 1px solid $--very-light-pink;
 	overflow-y: auto;
 	height: 350px;
+	z-index: 1;
 }
 .title-container {
 	display: flex;

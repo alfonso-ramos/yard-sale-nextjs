@@ -1,5 +1,7 @@
 import { useContext } from 'react'
 import OrderItem from '@components/OrderItem'
+import Image from 'next/image'
+import Link from 'next/link'
 
 import flecha from '@icons/flechita.svg'
 
@@ -20,26 +22,26 @@ const MyOrder = () => {
 
     return (
         <aside className={styles.MyOrder}>
-            <div className="title-container">
-                <img src={flecha} alt="arrow" />
-                <p className="title">My order</p>
+            <div className={styles['title-container']}>
+                <Image src={flecha} alt="arrow" />
+                <p className={styles.title}>My order</p>
             </div>
-            <div className="my-order-content">
+            <div className={styles['my-order-content']}>
                 {state.cart.map((product, index) => (
                     <OrderItem
                     indexValue={index}
                     key={index}
                     product={product} />
                 ))}
-                <div className="order">
+                <div className={styles.order}>
                     <p>
                         <span>Total</span>
                     </p>
                     <p>${sumTotal()}</p>
                 </div>
-                <button className="primary-button">
+                <Link className={styles['primary-button']} href="/checkout">
                     Checkout
-                </button>
+                </Link>
             </div>
         </aside>
     )
